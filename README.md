@@ -19,7 +19,7 @@ SQL Server üzerinde veritabanınızı oluşturmak için create_tables.sql dosya
 
 Projeyi derleyip çalıştırın. Tarayıcıda kitapları listeleyebilir, yeni kitap ekleyebilir, ödünç alma ve iade işlemlerini yapabilirsiniz.
 
-
+## Mimari Yapı
 
 Bu proje temel olarak MVC (Model-View-Controller) yapısıyla geliştirilmiştir:
 
