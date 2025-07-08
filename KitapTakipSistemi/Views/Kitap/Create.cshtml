@@ -1,0 +1,59 @@
+﻿@model KitapTakipSistemi.DAL.Kitap
+
+@{
+    ViewBag.Title = "Yeni Kitap Ekle";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // layout bağlı değilse eklemeyi unutma
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">📚 Yeni Kitap Ekle</h2>
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", @class = "needs-validation", novalidate = "novalidate" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Kitap Adı</label>
+                @Html.TextBoxFor(model => model.Ad, new { @class = "form-control", placeholder = "Kitap adı giriniz" })
+                @Html.ValidationMessageFor(model => model.Ad, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Yazar</label>
+                @Html.TextBoxFor(model => model.Yazar, new { @class = "form-control", placeholder = "Yazar adı giriniz" })
+                @Html.ValidationMessageFor(model => model.Yazar, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Yayın Yılı</label>
+                @Html.TextBoxFor(model => model.YayinYili, new { @class = "form-control", placeholder = "2023" })
+                @Html.ValidationMessageFor(model => model.YayinYili, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Stok Adedi</label>
+                @Html.TextBoxFor(model => model.Stok, new { @class = "form-control", placeholder = "Stok miktarı" })
+                @Html.ValidationMessageFor(model => model.Stok, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Kitap Türü</label>
+            @Html.DropDownList("TurId", (SelectList)ViewBag.TurId, "Tür Seçiniz", new { @class = "form-select" })
+            @Html.ValidationMessageFor(model => model.TurId, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label">Kitap Fotoğrafı</label>
+            <input type="file" name="Foto" class="form-control" accept="image/*" />
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <input type="submit" value="📥 Kaydet" class="btn btn-success" />
+            @Html.ActionLink("İptal", "Index", null, new { @class = "btn btn-secondary" })
+        </div>
+    }
+</div>

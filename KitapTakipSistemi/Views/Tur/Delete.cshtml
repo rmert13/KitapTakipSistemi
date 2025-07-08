@@ -1,0 +1,37 @@
+﻿@model KitapTakipSistemi.DAL.Tur
+
+@{
+    ViewBag.Title = "Tür Sil";
+}
+
+<div class="container mt-4">
+    <div class="card shadow-sm border-0 rounded-4">
+        <div class="card-header bg-danger text-white rounded-top-4">
+            <h4 class="mb-0"><i class="bi bi-trash3-fill me-2"></i>Türü Sil</h4>
+        </div>
+
+        <div class="card-body p-4">
+            <div class="alert alert-warning d-flex align-items-center" role="alert">
+                <i class="bi bi-exclamation-triangle-fill me-2 fs-4"></i>
+                <div>
+                    <strong>Bu türü silmek istediğinize emin misiniz?</strong>
+                </div>
+            </div>
+
+            <h5 class="mb-4"><span class="badge bg-secondary p-2">@Model.Ad</span></h5>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-danger">
+                        <i class="bi bi-trash-fill me-1"></i> Sil
+                    </button>
+
+                    @Html.ActionLink("İptal", "Index", null, new { @class = "btn btn-outline-secondary" })
+                </div>
+            }
+        </div>
+    </div>
+</div>

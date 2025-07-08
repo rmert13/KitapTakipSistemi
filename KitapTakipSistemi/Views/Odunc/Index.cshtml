@@ -1,0 +1,68 @@
+﻿@model IEnumerable<KitapTakipSistemi.DAL.Odunc>
+
+@{
+    ViewBag.Title = "Ödünç Alınan Kitaplar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="mb-4"><i class="fas fa-book-reader text-primary"></i> Ödünç Alınan Kitaplar</h2>
+
+<div class="d-flex justify-content-end mb-3">
+    <a href="@Url.Action("Create")" class="btn btn-success">
+        <i class="fas fa-plus-circle"></i> Yeni Ödünç Al
+    </a>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Kullanıcı Adı</th>
+                <th>Kitap Adı</th>
+                <th>Ödünç Tarihi</th>
+                <th>İade Tarihi</th>
+                <th>Durum</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var rowClass = item.IadeEdildi ? "table-light" : "";
+
+                <tr class="@rowClass">
+                    <td>@item.KullaniciAdi</td>
+                    <td>@item.Kitap.Ad</td>
+                    <td>@item.OduncTarihi.ToShortDateString()</td>
+                    <td>
+                        @(item.OduncIadeTarihi.HasValue
+                            ? item.OduncIadeTarihi.Value.ToShortDateString()
+                            : "-")
+                    </td>
+                    <td>
+                        @if (item.IadeEdildi)
+                        {
+                            <span class="badge bg-success"><i class="fas fa-check-circle"></i> İade Edildi</span>
+                        }
+                        else
+                        {
+                            <span class="badge bg-warning text-dark"><i class="fas fa-clock"></i> Devam Ediyor</span>
+                        }
+                    </td>
+                    <td>
+                        @if (!item.IadeEdildi)
+                        {
+                            <a href="@Url.Action("IadeEt", new { id = item.OduncId })" class="btn btn-warning btn-sm">
+                                <i class="fas fa-undo-alt"></i> İade Et
+                            </a>
+                        }
+                        else
+                        {
+                            <span class="text-muted">-</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

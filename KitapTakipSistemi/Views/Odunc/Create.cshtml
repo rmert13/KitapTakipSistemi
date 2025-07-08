@@ -1,0 +1,47 @@
+﻿@model KitapTakipSistemi.DAL.Odunc
+
+@{
+    ViewBag.Title = "Yeni Ödünç Alma";
+}
+
+<div class="container mt-5">
+    <div class="card shadow rounded p-4">
+        <h2 class="mb-4">📖 Yeni Ödünç Alma</h2>
+
+        @* Başarı mesajı *@
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success text-center" role="alert">
+                @TempData["Success"]
+            </div>
+        }
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="row g-3">
+                <div class="col-md-12">
+                    @Html.LabelFor(model => model.KullaniciAdi, "Kullanıcı Adı", htmlAttributes: new { @class = "form-label fw-semibold" })
+                    @Html.TextBoxFor(model => model.KullaniciAdi, new { @class = "form-control", placeholder = "Kullanıcı Adı giriniz" })
+                    @Html.ValidationMessageFor(model => model.KullaniciAdi, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-12">
+                    @Html.Label("Kitap", htmlAttributes: new { @class = "form-label fw-semibold" })
+                    @Html.DropDownList("KitapId", (SelectList)ViewBag.KitapId, "-- Kitap Seçiniz --", new { @class = "form-select" })
+                    @Html.ValidationMessageFor(model => model.KitapId, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="col-md-12 d-flex justify-content-end gap-2">
+                    <input type="submit" value="📥 Ödünç Al" class="btn btn-primary" />
+                    @Html.ActionLink("İptal", "Index", null, new { @class = "btn btn-secondary" })
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

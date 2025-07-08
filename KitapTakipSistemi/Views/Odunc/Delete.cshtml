@@ -1,0 +1,25 @@
+﻿@model KitapTakipSistemi.DAL.Odunc
+
+@{
+    ViewBag.Title = "Kitap İade";
+}
+
+<h2>Kitap İade</h2>
+
+<h3>Bu kitabı iade etmek istediğinize emin misiniz?</h3>
+
+<div>
+    <h4>@Model.Kitap.Ad</h4>
+    <p><strong>Yazar:</strong> @Model.Kitap.Yazar</p>
+    <p><strong>Yayın Yılı:</strong> @Model.Kitap.YayinYili</p>
+    <p><strong>Stok:</strong> @Model.Kitap.Stok</p>
+</div>
+
+@using (Html.BeginForm("Delete", "Odunc", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(model => model.OduncId)
+
+    <button type="submit" class="btn btn-danger">İade Et</button>
+    @Html.ActionLink("İptal", "Index", null, new { @class = "btn btn-secondary" })
+}

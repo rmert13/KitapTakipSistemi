@@ -1,0 +1,6 @@
+# Visual Studio ve proje derleme dosyaları
+.vs/
+bin/
+obj/
+*.user
+*.suo

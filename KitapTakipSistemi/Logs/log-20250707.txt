@@ -1,0 +1,37 @@
+2025-07-07 01:41:13.754 +03:00 [INF] Yeni kitap eklendi: fdsfsd, Yazar: sfdsdf
+2025-07-07 01:43:07.118 +03:00 [INF] Yeni kitap eklendi: sdfsdf, Yazar: sdfsdf
+2025-07-07 01:45:33 [INF] 📦 Uygulama başlatıldı.
+2025-07-07 01:45:57 [INF] Yeni kitap eklendi: asdasd - asdasd
+2025-07-07 01:51:58 [INF] Yeni kitap eklendi: fdgdfg - dfgdfg
+2025-07-07 01:56:28 [INF] Yeni kitap eklendi: selam - ben
+2025-07-07 01:56:46 [INF] Kitap güncellendi: selam - ben
+2025-07-07 02:08:00 [INF] ⛔ Uygulama sonlandırıldı.
+2025-07-07 02:08:18 [INF] 📦 Uygulama başlatıldı.
+2025-07-07 02:08:28 [INF] Kitap detay görüntülendi: dsadasd - asdasd
+2025-07-07 02:12:52 [INF] Yeni kitap eklendi: werrwe - werwe
+2025-07-07 02:20:59 [INF] Kitap detay görüntülendi: dsadasd - asdasd
+2025-07-07 02:45:33 [INF] Kitap detay görüntülendi: dsadasd - asdasd
+2025-07-07 02:55:13 [INF] Kitap silindi: dsadasd - asdasd
+2025-07-07 02:55:33 [INF] Kitap detay görüntülendi: jhjghj - ghjghj
+2025-07-07 02:56:44 [INF] ⛔ Uygulama sonlandırıldı.
+2025-07-07 02:56:47 [INF] 📦 Uygulama başlatıldı.
+2025-07-07 14:43:59 [INF] Kitap detay görüntülendi: sdffs - sdfsdf
+2025-07-07 15:03:19 [INF] Kitap detay görüntülendi: sdfgdfg - dfgdfg
+2025-07-07 15:03:31 [INF] Kitap detay görüntülendi: sdfgdfg - dfgdfg
+2025-07-07 15:05:10 [INF] Kitap detay görüntülendi: sdfgdfg - dfgdfg
+2025-07-07 15:07:03 [INF] Yeni kitap eklendi: Yeraltından Notlar - Fyodor Mihailoviç Dostoyevski
+2025-07-07 15:07:09 [INF] Kitap detay görüntülendi: Yeraltından Notlar - Fyodor Mihailoviç Dostoyevski
+2025-07-07 15:10:21 [INF] Kitap güncellendi: Yeraltından Notlar - Fyodor Mihailoviç Dostoyevski
+2025-07-07 15:10:28 [INF] Kitap detay görüntülendi: Yeraltından Notlar - Fyodor Mihailoviç Dostoyevski
+2025-07-07 15:28:30 [INF] Kitap detay görüntülendi: Yeraltından Notlar - Fyodor Mihailoviç Dostoyevski
+2025-07-07 15:29:41 [INF] Kitap detay görüntülendi: Yeraltından Notlar - Fyodor Mihailoviç Dostoyevski
+2025-07-07 15:31:51 [INF] Yeni kitap eklendi: selina - mert
+2025-07-07 15:32:01 [INF] Kitap detay görüntülendi: selina - mert
+2025-07-07 15:32:22 [INF] Kitap güncellendi: selina - mert
+2025-07-07 17:31:20 [INF] ⛔ Uygulama sonlandırıldı.
+2025-07-07 17:31:37 [INF] 📦 Uygulama başlatıldı.
+2025-07-07 18:20:34 [INF] Kitap detay görüntülendi: sdfgdfg - dfgdfg
+2025-07-07 18:20:38 [INF] Kitap detay görüntülendi: sdffs - sdfsdf
+2025-07-07 18:20:41 [INF] Kitap detay görüntülendi: fdgdfg - dfgdfg
+2025-07-07 18:23:10 [INF] Kitap detay görüntülendi: fdsfsd - sfdsdf
+2025-07-07 18:23:17 [INF] Kitap detay görüntülendi: Yeraltından Notlar - Fyodor Mihailoviç Dostoyevski

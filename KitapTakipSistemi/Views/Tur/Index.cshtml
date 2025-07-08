@@ -1,0 +1,37 @@
+﻿@model IEnumerable<KitapTakipSistemi.DAL.Tur>
+
+@{
+    ViewBag.Title = "Türler Listesi";
+}
+
+<div class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-primary fw-bold"><i class="fa-solid fa-bookmark"></i> Türler Listesi</h2>
+        @Html.ActionLink("➕ Yeni Tür Ekle", "Create", "Tur", null, new { @class = "btn btn-success btn-lg" })
+    </div>
+
+    <div class="card shadow rounded">
+        <div class="card-body p-0">
+            <table class="table table-hover mb-0">
+                <thead class="table-light">
+                    <tr>
+                        <th class="ps-4">📘 Tür Adı</th>
+                        <th class="text-end pe-4">⚙️ İşlemler</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var tur in Model)
+                    {
+                        <tr>
+                            <td class="ps-4 align-middle">@tur.Ad</td>
+                            <td class="text-end pe-4">
+                                @Html.ActionLink("📝 Düzenle", "Edit", new { id = tur.TurId }, new { @class = "btn btn-outline-warning btn-sm me-2" })
+                                @Html.ActionLink("🗑️ Sil", "Delete", new { id = tur.TurId }, new { @class = "btn btn-outline-danger btn-sm" })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
