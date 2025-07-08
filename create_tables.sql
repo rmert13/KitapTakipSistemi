@@ -1,0 +1,33 @@
+
+CREATE TABLE Turler (
+    TurId INT PRIMARY KEY IDENTITY(1,1),
+    Ad NVARCHAR(100) NOT NULL
+);
+
+
+CREATE TABLE Kitaplar (
+    KitapId INT PRIMARY KEY IDENTITY(1,1),
+    Ad NVARCHAR(200) NOT NULL,
+    Yazar NVARCHAR(100),
+    YayinYili INT CHECK (YayinYili BETWEEN 1000 AND 2025),
+    Stok INT CHECK (Stok >= 0),
+    ResimYolu NVARCHAR(255),
+    TurId INT NOT NULL,
+    FOREIGN KEY (TurId) REFERENCES Turler(TurId)
+);
+
+
+CREATE TABLE OduncIslemleri (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    KitapId INT NOT NULL,
+    AlisTarihi DATE NOT NULL,
+    IadeTarihi DATE,
+    FOREIGN KEY (KitapId) REFERENCES Kitaplar(KitapId)
+);
+
+
+CREATE TABLE Loglar (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Islem NVARCHAR(255) NOT NULL,
+    Tarih DATETIME NOT NULL DEFAULT GETDATE()
+);
