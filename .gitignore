@@ -1,6 +1,10 @@
 # Visual Studio ve proje derleme dosyaları
-.vs/
 bin/
 obj/
+.vs/
 *.user
 *.suo
+*.exe
+*.dll
+*.pdb
+*.cache

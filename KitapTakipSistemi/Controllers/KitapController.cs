@@ -111,7 +111,7 @@ namespace KitapTakipSistemi.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.TurId = new SelectList(db.Turler, "TurId", "Ad", kitap.TurId);
+             ViewBag.TurId = new SelectList(db.Turler, "TurId", "Ad", kitap.TurId);
             return View(kitap);
         }
 
